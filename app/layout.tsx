@@ -22,7 +22,9 @@ export default function RootLayout({
     <html lang="hu" className={cn("font-sans", geist.variable)}>
       <body className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex flex-col grow">{children}</main>
+        <main className="flex flex-col grow md:w-4/5 w-full mx-auto sm:px-0 p-4">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
