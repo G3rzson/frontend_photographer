@@ -14,6 +14,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { NAV_LINKS } from "@/Constants/constants";
+import { ThemeSwitcher } from "@/features/ThemeSwicher/ThemeSwitcher";
 
 export default function MobileNav() {
   return (
@@ -45,6 +46,10 @@ export default function MobileNav() {
                   </Link>
                 </li>
               ))}
+
+              <li className="w-full px-4">
+                <ThemeSwitcher isMobile={true} />
+              </li>
             </ul>
           </div>
           <DrawerTitle className="sr-only">Navigációs menü</DrawerTitle>
