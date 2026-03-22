@@ -12,8 +12,9 @@ import {
 } from "@/components/ui/drawer";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { NavLinks } from "../Constants/constants";
 import Logo from "./Logo";
+import { NAV_LINKS } from "@/constants/constants";
+import { ThemeSwitcher } from "@/features/ThemeSwicher/ThemeSwitcher";
 
 export default function MobileNav() {
   return (
@@ -33,9 +34,9 @@ export default function MobileNav() {
       >
         <DrawerHeader className="p-0">
           <Logo />
-          <div className="no-scrollbar overflow-y-auto px-4">
+          <div className="no-scrollbar overflow-y-auto">
             <ul className="flex flex-col items-start my-4">
-              {NavLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <li key={link.href} className="w-full">
                   <Link
                     className="hover:bg-current/10 active:bg-current/10 duration-300 w-full p-4 block"
@@ -45,6 +46,10 @@ export default function MobileNav() {
                   </Link>
                 </li>
               ))}
+
+              <li className="w-full px-4">
+                <ThemeSwitcher isMobile={true} />
+              </li>
             </ul>
           </div>
           <DrawerTitle className="sr-only">Navigációs menü</DrawerTitle>
