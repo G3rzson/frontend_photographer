@@ -33,7 +33,7 @@ export default function MobileNav() {
       >
         <DrawerHeader className="p-0">
           <Logo />
-          <div className="no-scrollbar overflow-y-auto px-4">
+          <div className="no-scrollbar overflow-y-auto">
             <ul className="flex flex-col items-start my-4">
               {NavLinks.map((link) => (
                 <li key={link.href} className="w-full">
