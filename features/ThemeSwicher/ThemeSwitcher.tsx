@@ -12,7 +12,6 @@ import {
 import { LaptopMinimalCheck, Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { is } from "zod/locales";
 
 export function ThemeSwitcher({ isMobile }: { isMobile: boolean }) {
   const { theme, setTheme } = useTheme();
