@@ -1,6 +1,10 @@
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 
+// todo: add animation to navlinks
+// todo: add lazy loading to images
+// todo: add unit tests to components
+
 export default function Home() {
   return (
     <div className="flex flex-col md:flex-row grow items-center justify-between gap-8">
@@ -10,7 +14,7 @@ export default function Home() {
             src="/profil.png"
             alt="Profilkép"
             fill
-            className="rounded-lg object-cover grayscale dark:brightness-20"
+            className="rounded-lg object-cover grayscale"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 200px, 160px"
             loading="eager"
           />
