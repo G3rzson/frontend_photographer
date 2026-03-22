@@ -14,7 +14,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { PRICE_LIST } from "@/Constants/constants";
+import { PRICE_LIST } from "@/constants/constants";
 
 export default function PricesPage() {
   return (

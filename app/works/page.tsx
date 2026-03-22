@@ -22,7 +22,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { PROJEKTS } from "@/Constants/constants";
+import { PROJEKTS } from "@/constants/constants";
 
 export default function ProjectsPage() {
   return (

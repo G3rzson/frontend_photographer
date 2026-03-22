@@ -1,6 +1,6 @@
 import { ThemeSwitcher } from "@/features/ThemeSwicher/ThemeSwitcher";
-import { NAV_LINKS } from "../../../Constants/constants";
-import Link from "next/dist/client/link";
+import { NAV_LINKS } from "../../../constants/constants";
+import Link from "next/link";
 
 export default function DesktopNav() {
   return (

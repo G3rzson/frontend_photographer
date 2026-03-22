@@ -13,7 +13,7 @@ import {
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Logo from "./Logo";
-import { NAV_LINKS } from "@/Constants/constants";
+import { NAV_LINKS } from "@/constants/constants";
 import { ThemeSwitcher } from "@/features/ThemeSwicher/ThemeSwitcher";
 
 export default function MobileNav() {

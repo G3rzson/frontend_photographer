@@ -1,36 +1,224 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📸 Fotós Portfólió Weboldal
 
-## Getting Started
+Modern és elegáns portfólió weboldal fotósok számára, amely lehetőséget ad munkáik bemutatására és ügyfelek vonzására. Responsive design, dark mode támogatás és professzionális UI komponensekkel.
 
-First, run the development server:
+> 🎨 **Demo projekt**: A galéria képek Google Gemini AI és Canva segítségével készült illusztrációk, amelyek bemutatják a weboldal funkcionalitását.
+
+## ✨ Funkciók
+
+- 🎨 **Modern UI/UX**: Shadcn/ui komponenskönyvtár alapú elegáns felület
+- 🌓 **Dark/Light Mode**: Automatikus témaváltás a rendszer beállításai alapján
+- 📱 **Teljesen Responsive**: Mobil, tablet és desktop optimalizált megjelenés
+- 🖼️ **Galéria Rendszer**: Collapsible kategóriák carousel nézettel
+- 💰 **Árkalkulátor**: Részletes szolgáltatás csomagok bemutatása
+- 📧 **Kapcsolati Űrlap**: Validált form React Hook Form + Zod használatával
+- ♿ **Accessibility**: WCAG irányelvek szerinti akadálymentesítés
+- ⚡ **Teljesítmény**: Next.js Image optimalizáció és SSR/SSG előnyök
+
+## 🛠️ Technológiai Stack
+
+### Core
+
+- **Framework**: [Next.js 16.2](https://nextjs.org/) (App Router)
+- **React**: 19.2.4
+- **TypeScript**: 5.x (strict mode)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+
+### UI & Components
+
+- **Component Library**: [Shadcn/ui](https://ui.shadcn.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Carousel**: [Embla Carousel](https://www.embla-carousel.com/)
+- **Theme**: [next-themes](https://github.com/pacocoursey/next-themes)
+
+### Form & Validation
+
+- **Form Management**: [React Hook Form](https://react-hook-form.com/)
+- **Schema Validation**: [Zod](https://zod.dev/)
+- **Resolver**: @hookform/resolvers
+
+### Dev Tools
+
+- **Linting**: ESLint 9 (Next.js config)
+- **PostCSS**: Tailwind PostCSS plugin
+
+## 📁 Projekt Struktúra
+
+```
+frontend_photographer/
+├── app/                      # Next.js App Router
+│   ├── layout.tsx           # Root layout (Theme Provider, Header, Footer)
+│   ├── page.tsx             # Főoldal
+│   ├── contacts/            # Kapcsolat oldal
+│   ├── prices/              # Árak oldal
+│   └── works/               # Munkák galéria
+├── components/
+│   └── ui/                  # Shadcn UI komponensek
+├── features/                # Feature-based komponensek
+│   ├── Contacts/           # Kapcsolati űrlap + validáció
+│   ├── Footer/             # Footer komponens
+│   ├── Header/             # Navigation (Desktop + Mobile)
+│   └── ThemeSwicher/       # Dark/Light mode toggle
+├── Constants/              # Statikus adatok (nav, galéria, árak)
+├── lib/                    # Utility függvények
+└── public/                 # Statikus assets (képek)
+    ├── birthday/
+    ├── wedding/
+    └── contacts/
+```
+
+## 🚀 Telepítés és Futtatás
+
+### Előfeltételek
+
+- Node.js 20.x vagy újabb
+- npm, yarn, pnpm, vagy bun package manager
+
+### Lépések
+
+1. **Repository klónozása**
+
+```bash
+git clone https://github.com/G3rzson/frontend_photographer.git
+cd frontend_photographer
+```
+
+2. **Függőségek telepítése**
+
+```bash
+npm install
+# vagy
+yarn install
+# vagy
+pnpm install
+```
+
+3. **Fejlesztői szerver indítása**
 
 ```bash
 npm run dev
-# or
+# vagy
 yarn dev
-# or
+# vagy
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Böngészőben megnyitás**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build és Production
 
-## Learn More
+```bash
+# Production build készítése
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Production szerver indítása
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📖 Használat
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Képek hozzáadása
 
-## Deploy on Vercel
+1. Helyezd el a képeket a `public/` mappában (pl. `public/wedding/`, `public/birthday/`)
+2. Frissítsd a `Constants/constants.ts` fájlt:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```typescript
+export const PROJEKTS = [
+  {
+    title: "Kategória neve",
+    images: [
+      { src: "/mappa/kep1.png", alt: "Kép leírása" },
+      // ... további képek
+    ],
+  },
+];
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> **Megjegyzés**: A jelenlegi galéria képek Google Gemini AI és Canva használatával készült demó tartalmak, amelyek bemutatják a portfólió funkcionalitását.
+
+### Árak módosítása
+
+Szerkeszd a `Constants/constants.ts` fájlt:
+
+```typescript
+export const PRICE_LIST = [
+  {
+    event: "Szolgáltatás neve",
+    price: 50000,
+    time: "2 óra",
+    description: "Részletes leírás...",
+  },
+];
+```
+
+### Navigáció frissítése
+
+```typescript
+export const NAV_LINKS = [{ href: "/uj-oldal", title: "Új oldal" }];
+```
+
+## 🎯 Roadmap & Fejlesztési Lehetőségek
+
+### Tervezett funkciók
+
+- [ ] **Backend integráció**: Email küldés (pl. Resend, SendGrid, vagy Nodemailer)
+- [ ] **Form submission**: Valós adatküldés és visszajelzés
+- [ ] **CMS integráció**: Sanity vagy ContentLayer tartalomkezeléshez
+- [ ] **Képfeltöltés**: Admin felület galériák kezeléséhez
+- [ ] **Blog/Hírek szekció**: SEO optimalizált tartalmak
+- [ ] **Többnyelvűség**: i18n támogatás (magyar + angol)
+- [ ] **Foglalási rendszer**: Időpontfoglalás naptárral
+- [ ] **Admin Dashboard**: Tartalom és foglalások kezelése
+
+### Javasolt fejlesztések
+
+- [ ] Unit tesztek (Vitest/Jest)
+- [ ] E2E tesztek (Playwright/Cypress)
+- [ ] Lighthouse score optimalizálás (100/100)
+- [ ] Progressive Web App (PWA) funkciók
+- [ ] Sitemap és robots.txt generálás
+- [ ] OpenGraph meta tagek finomítása
+- [ ] Google Analytics / Vercel Analytics integráció
+- [ ] Image lazy loading és blur placeholder
+
+## 🔧 Konfiguráció
+
+### Environment Variables (jövőbeli használatra)
+
+Hozz létre egy `.env.local` fájlt:
+
+```env
+# Email szolgáltatás (pl. Resend)
+RESEND_API_KEY=your_api_key_here
+EMAIL_TO=your@email.com
+
+# Analytics (opcionális)
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+```
+
+## 📄 License
+
+Ez a projekt tanulási/portfólió célra készült.
+
+## 👤 Készítő
+
+**G3rzson**
+
+- GitHub: [@G3rzson](https://github.com/G3rzson)
+
+## 🙏 Köszönetnyilvánítás
+
+- [Next.js](https://nextjs.org/) - A React framework
+- [Shadcn/ui](https://ui.shadcn.com/) - UI komponensek
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
+- [Vercel](https://vercel.com/) - Hosting és deployment
+- [Google Gemini](https://gemini.google.com/) - AI-generált demó képek készítése
+- [Canva](https://www.canva.com/) - Képszerkesztés és design elemek
+
+---
+
+**Megjegyzés**: A kapcsolati űrlap jelenleg fejlesztés alatt áll. Az adatok elküldése még nem működik (csak frontend validáció van implementálva).

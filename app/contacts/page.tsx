@@ -1,4 +1,4 @@
-import { SOCIALS } from "@/Constants/constants";
+import { SOCIALS } from "@/constants/constants";
 import ContactsForm from "@/features/Contacts/Components/ContactsForm";
 
 export default function ContactsPage() {
