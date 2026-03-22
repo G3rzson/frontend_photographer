@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/drawer";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { NavLinks } from "../Constants/constants";
 import Logo from "./Logo";
+import { NAV_LINKS } from "@/Constants/constants";
 
 export default function MobileNav() {
   return (
@@ -35,7 +35,7 @@ export default function MobileNav() {
           <Logo />
           <div className="no-scrollbar overflow-y-auto">
             <ul className="flex flex-col items-start my-4">
-              {NavLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <li key={link.href} className="w-full">
                   <Link
                     className="hover:bg-current/10 active:bg-current/10 duration-300 w-full p-4 block"
