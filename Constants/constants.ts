@@ -79,3 +79,18 @@ export const PRICE_LIST = [
       "A csomag tartalmazza az előre megbeszélt helyszínen a képek elkészítését. Megbeszélés szerint a helyszín lehet kültéri vagy beltéri, képek száma megbeszélés szerint. A képek retusálása és digitális átadása is benne van az árban. Egyéb igény esetén egyedi árajánlatot adunk.",
   },
 ];
+
+export const SOCIALS = [
+  {
+    name: "Email",
+    href: "/contacts/email.svg",
+  },
+  {
+    name: "LinkedIn",
+    href: "/contacts/linkedin.svg",
+  },
+  {
+    name: "Facebook",
+    href: "/contacts/facebook.svg",
+  },
+];
