@@ -1,3 +1,4 @@
+import { ThemeSwitcher } from "@/features/ThemeSwicher/ThemeSwitcher";
 import { NAV_LINKS } from "../../../Constants/constants";
 import Link from "next/dist/client/link";
 
@@ -9,6 +10,9 @@ export default function DesktopNav() {
           <Link href={link.href}>{link.title}</Link>
         </li>
       ))}
+      <li>
+        <ThemeSwitcher isMobile={false} />
+      </li>
     </ul>
   );
 }
