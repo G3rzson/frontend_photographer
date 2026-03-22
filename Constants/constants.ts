@@ -37,3 +37,45 @@ export const PROJEKTS = [
     ],
   },
 ];
+
+export const PRICE_LIST = [
+  {
+    event: "Születésnap",
+    price: 50000,
+    time: "2 óra",
+    description:
+      "A csomag tartalmazza az előre megbeszélt helyszínen a képek elkészítését. Megbeszélés szerint a helyszín lehet kültéri vagy beltéri, képek száma megbeszélés szerint. A képek retusálása és digitális átadása is benne van az árban. Egyéb igény esetén egyedi árajánlatot adunk.",
+  },
+
+  {
+    event: "Esküvő előtti fotózás",
+    price: 50000,
+    time: "2 óra",
+    description:
+      "A csomag tartalmazza az előre megbeszélt helyszínen a képek elkészítését. Megbeszélés szerint a helyszín lehet kültéri vagy beltéri, képek száma megbeszélés szerint. A képek retusálása és digitális átadása is benne van az árban. Egyéb igény esetén egyedi árajánlatot adunk.",
+  },
+
+  {
+    event: "Polgári Esküvő fotózás",
+    price: 50000,
+    time: "2 óra",
+    description:
+      "A csomag tartalmazza az előre megbeszélt helyszínen a képek elkészítését. Megbeszélés szerint a helyszín lehet kültéri vagy beltéri, képek száma megbeszélés szerint. A képek retusálása és digitális átadása is benne van az árban. Egyéb igény esetén egyedi árajánlatot adunk.",
+  },
+
+  {
+    event: "Egyházi Esküvő fotózás",
+    price: 50000,
+    time: "2 óra",
+    description:
+      "A csomag tartalmazza az előre megbeszélt helyszínen a képek elkészítését. Megbeszélés szerint a helyszín lehet kültéri vagy beltéri, képek száma megbeszélés szerint. A képek retusálása és digitális átadása is benne van az árban. Egyéb igény esetén egyedi árajánlatot adunk.",
+  },
+
+  {
+    event: "Esküvő egész napos fotózás",
+    price: 200000,
+    time: "egész nap",
+    description:
+      "A csomag tartalmazza az előre megbeszélt helyszínen a képek elkészítését. Megbeszélés szerint a helyszín lehet kültéri vagy beltéri, képek száma megbeszélés szerint. A képek retusálása és digitális átadása is benne van az árban. Egyéb igény esetén egyedi árajánlatot adunk.",
+  },
+];
