@@ -15,8 +15,10 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { NAV_LINKS } from "@/constants/constants";
 import { ThemeSwitcher } from "@/features/ThemeSwicher/ThemeSwitcher";
+import { usePathname } from "next/navigation";
 
 export default function MobileNav() {
+  const pathname = usePathname();
   return (
     <Drawer direction="left">
       <DrawerTrigger asChild>
@@ -39,7 +41,7 @@ export default function MobileNav() {
               {NAV_LINKS.map((link) => (
                 <li key={link.href} className="w-full">
                   <Link
-                    className="hover:bg-current/10 active:bg-current/10 duration-300 w-full p-4 block"
+                    className={`${pathname === link.href ? "active" : ""} nav-link mobile w-full p-4 block`}
                     href={link.href}
                   >
                     {link.title}

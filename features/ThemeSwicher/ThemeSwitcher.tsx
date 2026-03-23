@@ -28,7 +28,11 @@ export function ThemeSwitcher({ isMobile }: { isMobile: boolean }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" title="Téma kiválasztása" className="w-full">
+        <Button
+          variant="outline"
+          title="Téma kiválasztása"
+          className={`${isMobile ? "mt-4" : "mt-0"} w-full`}
+        >
           {theme === "light" ? (
             <Sun />
           ) : theme === "dark" ? (

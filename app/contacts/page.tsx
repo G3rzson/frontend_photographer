@@ -8,7 +8,7 @@ export default function ContactsPage() {
         Kapcsolatok
       </h1>
 
-      <h2 className="text-xl text-center">
+      <h2 className="text-xl text-center text-balance">
         Egyedi igények vagy egyéb kérdések esetén lépjen kapcsolatba velünk:
       </h2>
 

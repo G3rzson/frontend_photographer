@@ -1,8 +1,6 @@
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 
-// todo: add animation to navlinks
-// todo: add lazy loading to images
 // todo: add unit tests to components
 
 export default function Home() {
