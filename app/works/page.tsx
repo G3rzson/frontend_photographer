@@ -29,13 +29,13 @@ export default function ProjectsPage() {
     <div className="sm:px-4 md:px-0 flex grow flex-col gap-4">
       <h1 className="text-3xl md:text-4xl font-bold text-center">Munkák</h1>
       {PROJEKTS.map((project) => (
-        <Card className="mx-auto w-full" key={project.title}>
+        <Card className="box mx-auto w-full" key={project.title}>
           <CardContent>
-            <Collapsible className="rounded-md data-[state=open]:bg-muted">
+            <Collapsible className="box rounded-md">
               <CollapsibleTrigger asChild>
                 <Button
                   variant="ghost"
-                  className="group w-full text-xl md:text-2xl"
+                  className="box group w-full text-xl md:text-2xl"
                 >
                   {project.title}
                   <ChevronDownIcon className="ml-auto group-data-[state=open]:rotate-180" />
@@ -73,6 +73,7 @@ export default function ProjectsPage() {
                                 alt={image.alt}
                                 fill
                                 className="object-contain rounded-2xl overflow-hidden select-none pointer-events-none"
+                                loading="lazy"
                               />
                             </div>
                           </DialogContent>

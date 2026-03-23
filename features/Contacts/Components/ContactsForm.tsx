@@ -14,13 +14,7 @@ import CustomText from "./CustomText";
 import { FieldGroup } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
 import CustomTextarea from "./CustomTextarea";
-import {
-  DialogContent,
-  Dialog,
-  DialogTrigger,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
+import { toast } from "sonner";
 
 export default function ContactsForm() {
   const {
@@ -36,11 +30,12 @@ export default function ContactsForm() {
     },
   });
 
-  async function onSubmit(data: ContactsFormType) {
+  function onSubmit(data: ContactsFormType) {
+    toast.success("Az adataid nem lettek elküldve! Ez csak egy demo oldal.");
     reset();
   }
   return (
-    <Card className="w-full sm:max-w-md mx-auto">
+    <Card className="box w-full sm:max-w-md mx-auto">
       <CardHeader>
         <CardTitle>Vedd fel velünk a kapcsolatot</CardTitle>
         <CardDescription className="text-muted-foreground">
@@ -67,25 +62,14 @@ export default function ContactsForm() {
         </form>
       </CardContent>
       <CardFooter>
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button
-              type="submit"
-              className="w-full cursor-pointer"
-              form="contacts-form"
-              disabled={isSubmitting}
-            >
-              Küldés
-            </Button>
-          </DialogTrigger>
-
-          <DialogContent>
-            <DialogTitle>Az adataid nem lettek elküldve!</DialogTitle>
-            <DialogDescription>
-              Fejlesztés alatt. Megértésed köszönjük!
-            </DialogDescription>
-          </DialogContent>
-        </Dialog>
+        <Button
+          type="submit"
+          className="w-full cursor-pointer"
+          form="contacts-form"
+          disabled={isSubmitting}
+        >
+          Küldés
+        </Button>
       </CardFooter>
     </Card>
   );

@@ -22,7 +22,7 @@ export default function PricesPage() {
       <h1 className="text-3xl md:text-4xl font-bold text-center">Árak</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {PRICE_LIST.map((price) => (
-          <Card key={price.event} size="sm" className="w-full h-full">
+          <Card key={price.event} size="sm" className="box w-full h-full">
             <CardHeader>
               <CardTitle>{price.event}</CardTitle>
               <CardDescription className="sr-only">
