@@ -86,22 +86,16 @@ frontend_photographer/
 
 A projekt **Vitest** és **React Testing Library** használatával írt unit teszteket tartalmaz.
 
-### Test Coverage
-
-- ✅ **19 teszt** implementálva
-- ✅ **6 test fájl** (komponensek + validáció)
-- ✅ **100% pass rate**
-
 ### Tesztelt komponensek
 
-| Komponens | Tesztek | Leírás |
-|-----------|---------|--------|
-| **Header** | 6 teszt | Navigation, logo, linkek, mobile menu |
-| **ContactsPage** | 5 teszt | Form mezők, submit gomb, validáció |
-| **contactsSchema** | 2 teszt | Zod schema validáció |
-| **HomePage** | 2 teszt | Főcím, profilkép megjelenítés |
-| **PricesPage** | 2 teszt | Árlista megjelenítés |
-| **WorksPage** | 2 teszt | Projekt gombok, galéria |
+| Komponens          | Tesztek | Leírás                                |
+| ------------------ | ------- | ------------------------------------- |
+| **Header**         | 6 teszt | Navigation, logo, linkek, mobile menu |
+| **ContactsPage**   | 5 teszt | Form mezők, submit gomb, validáció    |
+| **contactsSchema** | 2 teszt | Zod schema validáció                  |
+| **HomePage**       | 2 teszt | Főcím, profilkép megjelenítés         |
+| **PricesPage**     | 2 teszt | Árlista megjelenítés                  |
+| **WorksPage**      | 2 teszt | Projekt gombok, galéria               |
 
 ### Tesztelési elvek
 
