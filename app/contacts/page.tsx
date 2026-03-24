@@ -25,6 +25,7 @@ export default function ContactsPage() {
                 alt={social.name}
                 width={24}
                 height={24}
+                className="w-6 h-6"
               />
               <p>{social.name}</p>
             </li>
