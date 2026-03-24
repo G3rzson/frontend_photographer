@@ -40,12 +40,14 @@ export default function MobileNav() {
             <ul className="flex flex-col items-start my-4">
               {NAV_LINKS.map((link) => (
                 <li key={link.href} className="w-full">
-                  <Link
-                    className={`${pathname === link.href ? "active" : ""} nav-link mobile w-full p-4 block`}
-                    href={link.href}
-                  >
-                    {link.title}
-                  </Link>
+                  <DrawerClose asChild>
+                    <Link
+                      className={`${pathname === link.href ? "active" : ""} nav-link mobile w-full p-4 block`}
+                      href={link.href}
+                    >
+                      {link.title}
+                    </Link>
+                  </DrawerClose>
                 </li>
               ))}
 
