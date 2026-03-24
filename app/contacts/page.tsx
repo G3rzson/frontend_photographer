@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ContactsPage() {
   return (
-    <div className="sm:px-4 md:px-0 flex grow flex-col gap-4">
+    <div className="sm:px-4 md:px-0 flex grow flex-col gap-6">
       <h1 className="text-3xl md:text-4xl font-bold text-center">
         Kapcsolatok
       </h1>
