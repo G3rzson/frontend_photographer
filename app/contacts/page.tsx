@@ -1,5 +1,6 @@
 import { SOCIALS } from "@/constants/constants";
 import ContactsForm from "@/features/Contacts/Components/ContactsForm";
+import Image from "next/image";
 
 export default function ContactsPage() {
   return (
@@ -19,7 +20,12 @@ export default function ContactsPage() {
         <ul className="flex flex-col sm:flex-row gap-4">
           {SOCIALS.map((social) => (
             <li key={social.name} className="flex items-center gap-2">
-              <img src={social.href} alt={social.name} className="w-6 h-6" />
+              <Image
+                src={social.href}
+                alt={social.name}
+                width={24}
+                height={24}
+              />
               <p>{social.name}</p>
             </li>
           ))}
