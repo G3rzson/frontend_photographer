@@ -43,7 +43,11 @@ export default function ContactsForm() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form id="contacts-form" onSubmit={handleSubmit(onSubmit)}>
+        <form
+          id="contacts-form"
+          data-testid="contacts-form"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <FieldGroup>
             <CustomText
               control={control}

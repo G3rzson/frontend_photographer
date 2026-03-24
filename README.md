@@ -42,6 +42,14 @@ Modern és elegáns portfólió weboldal fotósok számára, amely lehetőséget
 - **Linting**: ESLint 9 (Next.js config)
 - **PostCSS**: Tailwind PostCSS plugin
 
+### Testing
+
+- **Test Framework**: [Vitest](https://vitest.dev/) 4.1.1
+- **Testing Library**: [@testing-library/react](https://testing-library.com/react) 16.1.0
+- **DOM Testing**: [@testing-library/dom](https://testing-library.com/) 10.4.0
+- **Test Environment**: jsdom
+- **Coverage**: 19 tesztek, 6 test fájl
+
 ## 📁 Projekt Struktúra
 
 ```
@@ -49,22 +57,67 @@ frontend_photographer/
 ├── app/                      # Next.js App Router
 │   ├── layout.tsx           # Root layout (Theme Provider, Header, Footer)
 │   ├── page.tsx             # Főoldal
+│   ├── Page.test.tsx        # ✅ Főoldal tesztek
 │   ├── contacts/            # Kapcsolat oldal
+│   │   └── ContactsPage.test.tsx  # ✅ Kapcsolat tesztek
 │   ├── prices/              # Árak oldal
+│   │   └── PricesPage.test.tsx    # ✅ Árak tesztek
 │   └── works/               # Munkák galéria
+│       └── WorksPage.test.tsx     # ✅ Munkák tesztek
 ├── components/
 │   └── ui/                  # Shadcn UI komponensek
 ├── features/                # Feature-based komponensek
 │   ├── Contacts/           # Kapcsolati űrlap + validáció
 │   ├── Footer/             # Footer komponens
 │   ├── Header/             # Navigation (Desktop + Mobile)
+│   │   └── Header.test.tsx # ✅ Header tesztek
 │   └── ThemeSwicher/       # Dark/Light mode toggle
 ├── Constants/              # Statikus adatok (nav, galéria, árak)
 ├── lib/                    # Utility függvények
+├── vitest.config.ts        # Vitest konfiguráció
+├── vitest.setup.ts         # Test setup fájl
 └── public/                 # Statikus assets (képek)
     ├── birthday/
     ├── wedding/
     └── contacts/
+```
+
+## 🧪 Tesztelés
+
+A projekt **Vitest** és **React Testing Library** használatával írt unit teszteket tartalmaz.
+
+### Tesztelt komponensek
+
+| Komponens          | Tesztek | Leírás                                |
+| ------------------ | ------- | ------------------------------------- |
+| **Header**         | 6 teszt | Navigation, logo, linkek, mobile menu |
+| **ContactsPage**   | 5 teszt | Form mezők, submit gomb, validáció    |
+| **contactsSchema** | 2 teszt | Zod schema validáció                  |
+| **HomePage**       | 2 teszt | Főcím, profilkép megjelenítés         |
+| **PricesPage**     | 2 teszt | Árlista megjelenítés                  |
+| **WorksPage**      | 2 teszt | Projekt gombok, galéria               |
+
+### Tesztelési elvek
+
+- 🎯 **Robosztus tesztek**: Strukturális megközelítés, nem törik szöveg változtatásra
+- ♿ **Accessibility-first**: Role-based selectorok (`getByRole`, `getByLabelText`)
+- 📦 **Feature-based szervezés**: Tesztek a komponensek mellett
+- 🔄 **Konstans alapú**: `NAV_LINKS` és más konstansok használata
+
+### Tesztek futtatása
+
+```bash
+# Watch mód (automatikus újrafuttatás)
+npm run test
+
+# Egyetlen futtatás (CI/CD-hez)
+npm run test:run
+
+# UI felülettel (vizuális debug)
+npm run test:ui
+
+# Specifikus teszt fájl
+npx vitest run features/Header/Header.test.tsx
 ```
 
 ## 🚀 Telepítés és Futtatás
@@ -117,6 +170,22 @@ npm run build
 
 # Production szerver indítása
 npm run start
+```
+
+### Tesztelés
+
+```bash
+# Tesztek futtatása watch módban (fejlesztéshez)
+npm run test
+
+# Tesztek egyszeri futtatása
+npm run test:run
+
+# Tesztek futtatása UI felülettel
+npm run test:ui
+
+# Specific teszt fájl futtatása
+npx vitest run app/Page.test.tsx
 ```
 
 ## 📖 Használat
@@ -176,8 +245,10 @@ export const NAV_LINKS = [{ href: "/uj-oldal", title: "Új oldal" }];
 
 ### Javasolt fejlesztések
 
-- [ ] Unit tesztek (Vitest/Jest)
+- [x] Unit tesztek (Vitest + Testing Library) - **Implementálva ✅**
 - [ ] E2E tesztek (Playwright/Cypress)
+- [ ] Integration tesztek (form submission, navigation)
+- [ ] Visual regression tesztek (Chromatic/Percy)
 - [ ] Lighthouse score optimalizálás (100/100)
 - [ ] Progressive Web App (PWA) funkciók
 - [ ] Sitemap és robots.txt generálás

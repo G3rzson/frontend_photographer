@@ -56,6 +56,7 @@ export default function ProjectsPage() {
                                 src={image.src}
                                 alt={image.alt}
                                 fill
+                                placeholder="blur"
                                 className="rounded-xl object-cover select-none pointer-events-none"
                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                               />
@@ -72,8 +73,8 @@ export default function ProjectsPage() {
                                 src={image.src}
                                 alt={image.alt}
                                 fill
+                                placeholder="blur"
                                 className="object-contain rounded-2xl overflow-hidden select-none pointer-events-none"
-                                loading="lazy"
                               />
                             </div>
                           </DialogContent>
