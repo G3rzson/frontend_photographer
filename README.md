@@ -24,6 +24,10 @@ A modern and responsive portfolio website for photographers built with Next.js, 
 - **Testing**: Vitest + React Testing Library
 - **Icons**: Lucide React
 
+## License
+
+This project was created for learning and portfolio purposes.
+
 ## 👤 Author
 
 **G3rzson**
