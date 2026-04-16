@@ -51,7 +51,7 @@ export default function ProjectsPage() {
                       >
                         <Dialog>
                           <DialogTrigger asChild>
-                            <div className="relative h-50 md:h-75 lg:h-100 w-full">
+                            <div className="relative h-50 md:h-75 lg:h-100 w-full cursor-zoom-in">
                               <Image
                                 src={image.src}
                                 alt={image.alt}
